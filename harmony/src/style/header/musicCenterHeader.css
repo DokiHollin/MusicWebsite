@@ -1,0 +1,66 @@
+
+.musicCenter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: calc(100vh / 13);
+    width: 70%; 
+    padding: 0 15%;
+}
+
+
+.musicCenter-left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 100%;
+}
+
+.musicCenter-logo {
+    width: 100px;
+    height: auto;
+    /* margin-left: 10%; */
+}
+
+
+.musicCenter-mainpage-link {
+    margin-left: 20px; 
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 10px; 
+    transition: color 0.3s ease; 
+}
+.musicCenter-mainpage-link:hover{
+    color: pink;
+}
+
+.musicCenter:hover {
+    color: pink;
+}
+
+.musicCenter-upload-btn {
+    margin-left: auto; 
+    margin-right: 20px;
+}
+
+  
+
+.musicCenter-right-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+.musicCenter-mail-icon {
+    margin: 0 10px;
+}
+
+.musicCenter-divider {
+    width: 1px;
+    height: 24px;
+    background-color: white;
+    margin: 0 10px;
+}

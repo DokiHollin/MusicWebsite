@@ -1,0 +1,282 @@
+
+.bottom {
+    height: calc(100vh / 11);
+    background-color: rgb(162, 152, 180) transparent;
+    box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.1);
+    backdrop-filter:  blur(2px);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 一个较高的 z-index 值确保该元素位于其他元素之上 */
+    transition: transform 0.5s ease-in-out;  /* 添加过渡效果 */
+
+}
+
+
+.bottom > * {
+    margin-top: 15px; /* 或者使用 padding-top: 20px; 根据你的需求 */
+}
+.hidden-bottom {
+    transform: translateY(100%);  /* 隐藏时向下滑动 */
+}
+
+
+/* Image Button CSS */
+.image-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin: 0 5px;
+
+}
+
+.image-btn img {
+    width: 50px;
+    height: auto;
+}
+
+.antd-btn {
+    /* color: rgb(96,86,131); */
+    color: white;
+    font-size: 400%;
+}
+
+.modal-content {
+    background-color: black;
+    width: 100%;
+    height: calc(100vh);
+    display: flex;
+    flex-direction: row; /* 改变方向为行 */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* 这将确保内部的内容不会溢出模态的边界 */
+
+}
+
+.progress-time-bar input[type="range"] {
+    appearance: none;
+    background: linear-gradient(to right, rgb(42,58,83) 0%, rgb(42,58,83) 50%, pink 50%, pink 100%); /* 这只是一个示例，50%将根据进度动态改变 */
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.2s;
+    position: relative; /* 添加这行 */
+}
+
+.progress-time-bar input[type="range"]:hover {
+    height: 8px;
+}
+
+.progress-time-bar input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: 1px solid rgb(42,58,83);
+    visibility: hidden;
+}
+
+.progress-time-bar input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: 1px solid rgb(42,58,83);
+    visibility: hidden;
+}
+
+.progress-time-bar input[type="range"]:hover::-webkit-slider-thumb {
+    visibility: visible;
+}
+
+.progress-time-bar input[type="range"]:hover::-moz-range-thumb {
+    visibility: visible;
+}
+
+
+.progress-time-bar {
+    padding-top: 10px;
+    flex: 0.2; /* adjust as needed */
+    width: 100%; /* use the full width */
+    position: absolute; /* 绝对定位使我们能够精确控制该元素的位置 */
+    bottom: 95%; /* 将其定位在 bottom 元素的顶部 */
+    left: 0; /* 确保它水平居左 */
+    width: 100%; /* 使它填充整个 bottom 元素的宽度 */
+
+}
+
+.bottom-controls {
+    flex: 0.8; /* adjust as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-controls, .center-controls, .right-controls {
+    display: flex;
+    align-items: center;
+
+}
+.center-controls{
+    /* margin-left: 8vw; */
+}
+
+.center-controls .image-btn{
+    font-size: 10px;
+
+}
+
+.song-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15px; /* adjust as needed */
+    color: white;
+}
+
+.song-title-artist {
+    display: flex;
+    align-items: center;
+}
+
+.artist-btn {
+    background: transparent;
+    border: none;
+    color: white; /* adjust color as needed */
+    cursor: pointer;
+    padding: 0;
+    margin-left: 5px; /* adjust as needed */
+    font-size: 15px;
+}
+
+progress {
+    width: 100%;
+
+}
+
+.right-controls .image-btn{
+    font-size: 10px;
+}
+
+/* Volume Control CSS */
+/*.volume-control {*/
+/*    width: 100px; !* Example size, you can adjust as needed *!*/
+/*    margin: 0 10px; !* Spacing around the volume control *!*/
+/*}*/
+
+.volume-control {
+    appearance: none;
+    background: linear-gradient(to right, rgb(42,58,83) 0%, rgb(42,58,83) 50%, pink 50%, pink 100%);
+    height: auto;
+    width: 30%;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.15s;
+}
+
+
+.volume-control::-webkit-slider-thumb {
+    appearance: none;
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: 1px solid rgb(42,58,83);
+}
+
+.volume-control::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgb(42,58,83);
+    cursor: pointer;
+    border: 1px solid pink;
+}
+
+.boot-icon {
+    color: white;
+    font-size: 400%;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.modal-queue-content {
+    position: absolute;
+    top: calc(1/7 * 100vh); /* 因为Middle Section开始于2/7的页面高度 */
+    left: 80%;
+    right: 0;
+    bottom: calc(1/7 * 100vh); /* 与Middle Section的高度相同 */
+    background-color: white;
+    overflow-y: auto; /* 如果内容过多，允许滚动 */
+}
+
+/* 测试用 ================================*/
+.btn-container-test {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu-test {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.dropdown-menu-test button {
+    padding: 10px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-menu-test button:hover {
+    background-color: #b44343;
+}
+/* 截至 ================================*/
+.locker-icon {
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    cursor: pointer; /* 让图标看起来是可点击的 */
+    right: 5px; /* 为了放在音量按钮的右侧 */
+}
+
+/* 解锁状态：图标在外部紧贴process-time-bar */
+.locker-icon.unlocked {
+    top: -25%; /* 调整到合适的位置 */
+}
+
+/* 锁定状态：图标在内部不贴process bar */
+.locker-icon.locked {
+    top: 2px; /* 位置可以根据实际效果进一步调整 */
+}
+
+.locker-icon:hover {
+    cursor: pointer;
+}

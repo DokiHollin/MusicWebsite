@@ -1,0 +1,351 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* 确保页面至少占满整个视口 */
+    overflow-y: auto;  /* 允许纵向滚动 */
+    
+}
+
+
+.gradient-left, .gradient-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    z-index: 2;
+    height: 30%;
+}
+
+.top-lower {
+    border-top: 1px solid white;
+    height: calc((100vh / 9) * 1 / 2);
+    background-color: rgb(42,58,83);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 70%;
+    padding: 0 15%;
+    border-bottom: 1px solid white;
+}
+
+.top-lower .contain {
+    justify-content: space-between;
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+}
+
+.contain button{
+    background-color: transparent;
+    border: none;
+    color: rgb(229, 222, 230);
+    font-weight: bold;
+}
+
+.contain button:hover {
+    color: white; /* 当鼠标悬停时改变背景颜色 */
+}
+
+
+.middle {
+    /*height: calc(100vh * 5 / 7);*/
+    display: flex;
+    flex-direction: column;
+
+}
+
+.middle-top {
+    height: 45vh;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(42,58,83);
+}
+
+.middle-top .slide-next {
+    opacity: 0;
+    transform: translateX(50%);
+}
+
+.middle-top .slide-next-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 800ms, transform 800ms;
+}
+
+.middle-top .slide-next-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.middle-top .slide-next-exit-active {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 800ms, transform 800ms;
+}
+
+/* 进入效果 (previous) */
+.middle-top .slide-previous {
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+.middle-top .center {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-top .slide-previous-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 800ms, transform 800ms;
+}
+
+/* 退出效果 (previous) */
+.middle-top .slide-previous-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.middle-top .slide-previous-exit-active {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: opacity 800ms, transform 800ms;
+}
+
+.middle-top .left-icon, .middle-top .right-icon {
+    font-size: 80px;
+    color: white;
+}
+
+
+.middle-top .glass-left, .glass-right {
+    position: absolute;
+    height: 45vh;
+    /*bottom: 0;*/
+    width: 20%;
+    /*background: rgba(255, 255, 255, 0.1);*/
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-top .glass-left {
+    left: 0;
+    background: linear-gradient(to left, rgb(42,58,83), rgb(76,86,131));
+}
+
+.middle-top .glass-right {
+    right: 0;
+    background: linear-gradient(to right, rgb(42,58,83), rgb(76,86,131));
+}
+
+.glass-left .LeftOutlined, .glass-right .RightOutlined {
+    font-size: 2rem; /* 调整图标大小 */
+    color: #fff; /* 调整图标颜色 */
+    cursor: pointer; /* 更改鼠标样式 */
+}
+
+.middle-top .slide-container {
+    height: 100%; /* 或你想要的任何高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-top .poster {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* 添加图标的样式 */
+.glass-left .LeftOutlined, .glass-right .RightOutlined {
+    font-size: 2rem; /* 调整图标大小 */
+    color: #fff; /* 调整图标颜色 */
+    cursor: pointer; /* 更改鼠标样式 */
+}
+
+.middle-bottom {
+    /*height: calc((100vh * 5 / 7) * 2 / 3);*/
+    display: flex;
+    background-color: #070628;
+}
+
+.middle-bottom .white-right {
+    width: 20%;
+    background: linear-gradient(to right, rgb(42,58,83), rgb(76,86,131));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-bottom .white-left {
+    width: 20%;
+    background: linear-gradient(to left, rgb(42,58,83), rgb(76,86,131));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-bottom .main {
+    width: 60%;
+    display: flex;
+    background-color: rgb(42,58,83);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.desc {
+padding: 100px;
+text-align: center;
+}
+
+.flex-container {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+    gap: 10px;
+}
+
+.flex-item {
+    flex-basis: calc(25% - 10px);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    background: radial-gradient(circle, rgb(229, 222, 230), rgb(42, 58, 83));
+}
+
+.flex-item img {
+    padding-top: 10px;
+    margin: auto;
+    width: 90%;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.flex-item:hover {
+    transform: scale(1.05);
+}
+
+.flex-item:hover img {
+    transform: scale(1.1);
+}
+
+.album-name {
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(229,222,230);
+    font-size: 16px;
+}
+
+.text-left-top {
+    margin-top: 14px;
+    font-size: 25px;
+    color: rgb(229,222,230);
+    font-family: 'Cambay Devanagari', serif;
+    border-bottom: 2px solid rgb(229,222,230);
+}
+
+.middle-bottom .rank {
+    border-top: 0.5px solid rgb(229,222,230);
+    width: 60%;
+    height: auto;
+    display: flex;
+    background-color: rgb(42,58,83);
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    border-bottom: 1px solid rgb(229,222,230);
+}
+
+.musicItem {
+    border-bottom: 0.5px solid rgb(229,222,230);
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgb(229,222,230);
+    background-color: rgb(42, 58, 83);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    transition: background-color 0.3s ease;
+}
+
+.homepage-title {
+    border-bottom: 0.5px solid rgb(229,222,230);
+    width: 58%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding-left: 15px;
+    padding-right: 10px;
+    color: rgb(229,222,230);
+    background-color: rgb(42, 58, 83);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    transition: background-color 0.3s ease;
+}
+
+/*.musicItem p {*/
+/*    margin: 0;*/
+/*    line-height: 1; !* 添加左右边距 *!*/
+/*}*/
+
+.musicItem:hover {
+    background-color: rgb(52, 68, 93); /* 当鼠标悬停时改变背景颜色 */
+}
+
+.musicItemImage {
+    width: auto;
+    height: 40%;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+
+
+

@@ -1,0 +1,92 @@
+.musician-center {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    overflow-y: auto;
+    height: 100vh;
+    
+}
+
+.stats-container,
+.comments-container,
+.center-upload-container {
+    margin-top: 20px;
+    padding: 10px;
+
+}
+
+.stats-container {
+    background-color: pink;
+}
+
+.comments-container,
+.center-upload-container {
+    background-color: rgb(191, 186, 186);
+}
+
+.stats,
+.comments-and-songs,
+.uploaded-songs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.stats {
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    background-color: rgb(191, 186, 186);
+    width: calc(33.33% - 10px);
+    margin-bottom: 10px;
+    height: 100px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.icon {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+.stat-number {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 16px;
+}
+
+.comment {
+    border: 1px solid black;
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.song {
+    border: 1px solid black;
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.song img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.song-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}

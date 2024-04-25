@@ -1,0 +1,169 @@
+.song_list_page_container {
+  .bottom_box {
+    height: 65%;
+
+    .ant-spin-container {
+      display: flex;
+      flex-flow: column nowrap;
+
+      .title {
+        padding: none;
+      }
+
+      .mode_switch {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: .6rem 0;
+        padding: 0 1.8rem;
+        font-size: 1.2rem;
+
+        .switch .anticon {
+          margin: 0 3px;
+        }
+      }
+
+      .bottom_box_list_container {
+        position: relative;
+        flex: 1;
+
+        .login_tip {
+          position: absolute;
+          left: 50%;
+          top: 45%;
+          font-size: 1.4rem;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
+
+// .transparent_modal {
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   &>.content {
+//     font-family: 'SourceHanSans-Light';
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-flow: column nowrap;
+//     width: 90%;
+//     height: 90%;
+//     color: #fff;
+//     background-image: linear-gradient(90deg, rgba(99, 99, 99, 0.1), rgba(99, 99, 99, 0.1) 1px, transparent 0, transparent), linear-gradient(90deg, hsla(0deg, 0%, 100%, 0.1) -20%, transparent 15%), linear-gradient(0deg, hsla(0deg, 0%, 100%, 0.1), transparent 25%);
+//     background-color: rgba(0, 0, 0, 0.5);
+//     border-top: 1px solid #ffffff7e;
+//     border-left: 1px solid #ffffff7e;
+//     border-radius: 30px;
+//     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.15);
+//     transition: background-color 0.5s, box-shadow 0.5s;
+//     overflow: hidden;
+
+//     &:hover {
+//       background-color: rgba(0, 0, 0, 0.7);
+//       box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+//     }
+
+//     &>.title {
+//       width: 100%;
+//       text-align: center;
+//       font-size: 1.5rem;
+//       padding-top: 1rem;
+//     }
+
+//     &>.real_content {
+//       width: 100%;
+//       height: 100%;
+//       flex: 1;
+//       text-align: center;
+//     }
+//   }
+// }
+
+.modal-outside{
+  position:absolute;
+  // left: 50%;
+  top: 9.5%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+.modal-outside:hover{
+  cursor: pointer;
+}
+
+#add{
+  left:0%;
+  font-size: 20px;
+  width: 0.2px;
+  height: 0.2px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  outline: none;
+  // box-shadow: 0 0 5px #1e90ff, 
+  // 0 0 10px #1e90ff,
+  // inset 0 0 5px #1e90ff,
+  // inset 0 0 10px #1e90ff;
+  transition: 0.5s linear;
+  position: relative;
+}
+
+#add::placeholder{
+  font-size: 13px;
+  color: transparent;
+  transition: 0.5s linear 0.5s;
+}
+
+#add:focus{
+  left: -40%;
+  width: 100px;
+  border-radius: 10px;
+  box-shadow: none;
+  border: 2px solid #1e90ff;
+}
+
+#add:focus::placeholder{
+  color:#a4b0b4;
+  // filter: blur(2px)
+}
+
+.modal-outside .bar{
+  width: 2px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  transform: rotate(-90deg);
+  top: 19%;
+  left: 45%;
+  
+  box-shadow: 0 0 1px #1e90ff, 0 0 20px #1e90ff;
+  transition: 0.5s linear ;
+}
+.modal-outside .bar2{
+  width: 2px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  transform: rotate(-0deg);
+  top: 19%;
+  left: 45%;
+  
+  box-shadow: 0 0 1px #1e90ff, 0 0 20px #1e90ff;
+  transition: 0.5s linear ;
+}
+#add:focus ~ .bar,
+#add:focus ~ .bar2 {
+  opacity: 0;  /* 使bar在add获得焦点时消失 */
+  visibility: hidden; /* 使其不再占用空间 */
+}
+#add:hover{
+  cursor: pointer;
+}
+

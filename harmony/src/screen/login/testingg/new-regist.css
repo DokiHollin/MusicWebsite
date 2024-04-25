@@ -1,0 +1,137 @@
+
+
+.registration-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 93%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.registration-logo {
+    width: 40%;
+    margin-bottom: 10px;
+}
+.registration-logo:hover{
+    cursor: pointer;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.regist-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.registration-btn {
+    font-size: 15px;
+    padding: 15px 45px;
+    /*margin: 0px 0;*/
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.registration-btn:hover {
+    background-color: pink;
+}
+
+.login-text {
+    color: black; /* Color for the "Already have an account?" link */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-text:hover {
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    /*margin-bottom: 10px;*/
+}
+
+/* Parent div for password input and eye icon */
+.password-wrapper {
+    position: relative;
+    display: inline-block; /* To make it adjust to the width of the child input */
+    width: 100%;
+}
+
+/* Eye icon styling */
+.password-toggle-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%; /* Center it vertically */
+    right: 10px; /* Position from the right edge */
+    cursor: pointer; /* To indicate it's clickable */
+    transform: translateY(-50%); /* To perfectly center it vertically */
+}
+
+.verification-section {
+    display: flex;             /* Enable flexbox */
+    justify-content: space-between; /* Space elements apart */
+    align-items: center;      /* Center items vertically */
+    gap: 10px;                    /* Add a gap between child elements */
+}
+
+.verification-section input {
+    flex: 1;                 /* Allow input to grow and take up space */
+}
+
+.send-email-btn {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    /*margin: 20px 0 20px 10px;*/
+}
+
+.send-email-btn:hover {
+    background-color: pink;   /* A slightly darker shade for hover effect */
+}
+
+.username-gender-wrapper {
+    display: flex;               /* Use flexbox to layout child elements */
+    justify-content: space-between; /* Distribute child elements evenly */
+    gap: 10px;                    /* Add a gap between child elements */
+}
+
+/* Style for the gender dropdown */
+.username-gender-wrapper select {
+    flex: 1;                     /* Take up remaining space */
+    padding: 20px;                /* Padding for comfort */
+    font-size: 13px;             /* Match font-size with other inputs */
+    border-radius: 5px;          /* Rounded corners */
+    height: 60px;
+    margin-top: 8px;
+}
+
+input::placeholder {
+    font-size: 17px;  /* Adjust to your desired size */
+    color: #aaa;     /* You can also adjust the color if needed */
+}

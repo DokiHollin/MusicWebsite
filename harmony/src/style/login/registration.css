@@ -1,0 +1,143 @@
+.reg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.reg-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    /*padding: 20px;*/
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.reg-logo {
+    width: 40%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.reg-input-section {
+    margin-bottom: 20px;
+}
+
+.reg-input, .reg-verification-section input{
+    width: 90%;
+    padding: 10px 10px;
+    margin: 5px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.reg-verification-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.reg-send-email-btn {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px 9px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reg-send-email-btn:hover {
+    background-color: pink;
+}
+
+.reg-username-gender-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reg-username-gender-wrapper select {
+    padding: 9px 0;
+    border-radius: 5px;
+}
+
+.reg-username-gender-wrapper input {
+    width: 70%;
+}
+
+.reg-password-toggle-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.reg-password-wrapper {
+    position: relative;
+}
+
+.reg-btn {
+    display: block;
+    padding: 15px 45px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 15px;
+    transition: background-color 0.2s;
+}
+
+.reg-btn:hover{
+    background-color: pink;
+}
+
+.reg-text-btn {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.reg-text-btn:hover{
+    color: pink;
+    text-decoration: underline;
+}
+
+.reg-error {
+    font-size: 12px;
+    color: red;
+    text-align: center;
+}
+
+input::placeholder {
+    font-size: 17px;  /* Adjust to your desired size */
+    color: #aaa;     /* You can also adjust the color if needed */
+}
+
+.password-rules {
+    font-size: 10px;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}

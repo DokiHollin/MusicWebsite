@@ -1,0 +1,163 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(238, 191, 198);
+}
+
+.poster {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.preA-glass-left, .preA-glass-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex; /* 使其子元素水平居中 */
+    align-items: center; /* 使其子元素垂直居中 */
+    justify-content: center; /* 使其子元素水平居中 */
+}
+
+.preA-glass-left {
+    left: 0;
+}
+
+.preA-glass-right {
+    right: 0;
+}
+
+/* 添加图标的样式 */
+.preA-glass-left .LeftOutlined, .preA-glass-right .RightOutlined {
+    font-size: 2rem; /* 调整图标大小 */
+    color: #fff; /* 调整图标颜色 */
+    cursor: pointer; /* 更改鼠标样式 */
+}
+
+
+
+.apply .apply-button, .apply .Q {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #000;
+    font-weight: normal; /* 添加此行确保文本不被加粗 */
+}
+
+.apply .apply-button {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.apply .divider {
+    height: 50%;
+    width: 2px;
+    background-color: #000;
+    margin-right: 20px;
+}
+
+.apply .Q {
+    flex-grow: 1;
+    text-align: right;
+    margin-right: 50px;
+}
+
+.apply .Q:hover {
+    color: red; /* 当鼠标悬停时，文本颜色变为红色 */
+}
+.apply .apply-button:hover {
+    color: red; /* 当鼠标悬停时，文本颜色变为红色 */
+}
+
+.apply {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 60px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    gap: 20px;
+}
+
+.left-icon, .right-icon {
+    font-size: 80px;
+    color: white;
+}
+
+.left-icon:hover, .right-icon:hover {
+    color: pink;  /* 设置鼠标悬停时的颜色为粉色 */
+}
+
+/* 进入效果 (next) */
+.slide-next-enter {
+    opacity: 0;
+    transform: translateX(50%);
+}
+
+.slide-next-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 800ms, transform 800ms;
+}
+
+/* 退出效果 (next) */
+.slide-next-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-next-exit-active {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 800ms, transform 800ms;
+}
+
+/* 进入效果 (previous) */
+.slide-previous-enter {
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+.slide-previous-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 800ms, transform 800ms;
+}
+
+/* 退出效果 (previous) */
+.slide-previous-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-previous-exit-active {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: opacity 800ms, transform 800ms;
+}
+html, body {
+    overflow-x: hidden; /* 隐藏水平滚动条 */
+    overflow-y: hidden; /* 隐藏垂直滚动条 */
+}
+

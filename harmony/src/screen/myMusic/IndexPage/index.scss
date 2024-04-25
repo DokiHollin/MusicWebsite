@@ -1,0 +1,31 @@
+.index_page {
+  width: 70%;
+  height: 85%;
+
+  &.page-enter {
+    position: absolute;
+  }
+
+  &.page-enter-active {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+
+  &.page-enter-done {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .5s !important;
+  }
+
+  &.page-exit {
+    position: absolute;
+    transform: translateY(0);
+    opacity: 1;
+    transition: all .5s !important;
+  }
+
+  &.page-exit-active {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+}

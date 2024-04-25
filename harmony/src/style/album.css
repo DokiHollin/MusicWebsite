@@ -1,0 +1,117 @@
+.album-detail-page {
+    background: linear-gradient(to right, rgb(42,58,83), rgb(76,86,131));
+    color: rgb(229,222,230);
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.album-header {
+    display: flex;
+    align-items: center;
+}
+
+.album-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.album-meta {
+    display: flex;
+    align-items: start;
+    margin-top: 30px;
+    gap: 40px;
+}
+
+.album-meta img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.album-info h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.album-info p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.album-section-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album-section-toggle button {
+    background: none;
+    border: none;
+    color: rgb(229,222,230);
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.album-section-toggle button:hover {
+    color: white;
+}
+
+.album-songs {
+    color: rgb(229,222,230); /* Setting text color to white */
+    width: 100%;
+    font-family: Arial, sans-serif; /* You can choose any font you like */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in total width and height */
+}
+
+.album-songs-header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(229,222,230);
+    background-color: rgb(52, 68, 93); /* Gives a slight transparency to the header */
+}
+
+.album-songs ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.song-row {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(229,222,230);
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: rgb(52, 68, 93); /* Highlight the row on hover */
+        color: white;
+    }
+}
+
+.song-index, .song-play, .song-duration {
+    display: flex;
+}
+
+
+.song-play img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer; /* Indicates clickable items */
+}

@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+# album/migrations/*
+# music/migrations/*
+# Musician/migrations/*
+# user/migrations/*
+.DS_Store

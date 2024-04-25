@@ -1,0 +1,122 @@
+.modal-content .full-screen-modal {
+    background-color: black;
+    width: 100%;
+    height: calc(6/7 * 100vh);
+    display: flex;
+    flex-direction: row; /* 改变方向为行 */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* 这将确保内部的内容不会溢出模态的边界 */
+}
+
+ .modal-content .left-side,.modal-content .right-side {
+    flex: 1; /* 每一边都占据50%的空间 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content .playscreen-circle {
+    width: 45%; /* 根据需要调整 */
+    height: 60%;
+    border-radius: 50%;
+    border: 30px solid dimgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.modal-content .playscreen-song-art {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* 歌词显示的样式 */
+.modal-content .playscreen-lyrics {
+    margin-top: 30px;
+    /*background-color: #ffffff;*/
+    padding: 120px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 15px;
+    width: 50%;
+}
+
+.modal-content .lyric-line {
+    margin: 10px 0;
+    text-align: center;
+    color: white;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.modal-content .lyric-line.current {
+    opacity: 1;
+    font-weight: bold;
+    color: pink;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-image {
+    animation: spin 8s linear infinite;
+}
+/* Style for the icon container */
+.icon-container {
+    width: 20vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* This will create a gap between the icons. Adjust the value as necessary */
+    position: absolute;
+    bottom: 5%; /* Position it 5% from the bottom. Adjust this value as needed */
+    left: 50%; /* This along with the next line helps to horizontally center the container */
+    transform: translateX(-50%);
+    z-index: 10; /* 设置一个比其他元素更高的z-index值 */
+}
+
+/* 单独为每个图标设置大小 */
+.icon-container > svg {
+    font-size: 54px; /* 调整这个值以更改图标的大小 */
+}
+.icon-container > span {
+    font-size: 40px;  /* 你可以根据需要调整这个值 */
+}
+
+.playlists-container {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    gap: 0.5rem;  /* Adjust space between playlist cards as needed */
+}
+
+.playlist-card {
+    width: 90%;  /* Take full width of the container */
+    padding: 0.75rem 1rem;  /* Adjust padding for each card */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    /* Optional styles for hover effect */
+    &:hover {
+        background-color: pink;
+    }
+}
+
+.playlist-name {
+    font-size: 1rem;
+    font-weight: 500;
+}

@@ -1,0 +1,57 @@
+/* PlayScreen.css */
+
+.playscreen-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2ebe8;
+    height: 100vh;
+    padding: 50px 0;
+  }
+
+  .playscreen-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 15px solid #e1d5d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .playscreen-song-art {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  /* Styles for the audio player */
+  .playscreen-player {
+    margin-top: 30px;
+  }
+
+  /* Styles for lyrics display */
+  .playscreen-lyrics {
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 90px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 15px;
+    width: 30%;
+  }
+
+  .lyric-line {
+    margin: 10px 0;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+
+  .lyric-line.current {
+    opacity: 1;
+    font-weight: bold;
+  }

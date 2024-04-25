@@ -1,0 +1,98 @@
+.apply-header {
+    display: flex;
+    /* justify-content: space-between;
+    padding: 20px 40px; */
+    font-size: 100%;
+    background-color: black;
+    /* backdrop-filter: blur(5px); */
+    height: calc((100vh / 9) * 3/4);
+    align-items: center;  /* 居中对齐子元素 */
+    justify-content: space-between;  /* 更改为 space-between 以分配左右空间 */
+    margin: 0 auto; 
+    width: 70%; 
+    padding: 0 15%;  /* 添加 padding 以满足左右边界的要求 */
+}
+
+/* .header a:not(:last-child) {
+    margin-right: 20px;
+} */
+.apply-header a {
+    text-decoration: none; /* 移除下划线 */
+    color: white; /* 更改文字颜色为白色 */
+}
+
+.apply-header-left, .apply-header-right {
+    /* display: flex;
+    align-items: center;
+    gap: 10px; */
+
+    /* flex: 1; */
+    display: flex;
+    align-items: center;
+    gap: 0px;  /* 使用 gap 来创建组件之间的间隙 */
+}
+
+.apply-header-left{
+    margin-left: 4%;
+}
+
+.apply-router-name {
+    margin-left: -16%; /* 调整这个值来获得您想要的效果 */
+    gap: 20px;
+    padding-left: 100px;
+    display: flex;
+}
+
+
+
+.apply-router-name a:hover{
+    color: pink;
+}
+
+.applyNav:hover {
+    color: pink; /* Change color to pink when hovered */
+    cursor: pointer;
+}
+.applyNav {
+    /* padding: 10px 20px; */
+    background-color: transparent; /* Remove background */
+    border: none; /* Remove border */
+    color: white; /* Set text color to white */
+    /* margin: 0 10px; */
+    transition: color 0.3s; /* Transition for smooth color change */
+    font-size: 100%;
+
+}
+
+.apply-website-icon, .apply-avatar-icon{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-self: center;  /* 使图标垂直居中，与header的其他内容对齐 */
+}
+
+.apply-website-icon{
+    width: 100px;
+    height: 100%;
+
+
+}
+
+.apply-header-right {
+    gap: 10px;
+    margin-right: 10%;
+
+}
+
+
+.apply-avatar-icon{
+    padding-right: 70px;
+}
+.apply-divider {
+    width: 1px;
+    height: 24px;
+    background-color: white;
+    position: absolute;
+
+    margin-left: 80px;
+}

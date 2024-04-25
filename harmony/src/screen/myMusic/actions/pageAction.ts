@@ -1,0 +1,1 @@
+import { getLyric, getSongByID, getSongFile } from '@/api/music';

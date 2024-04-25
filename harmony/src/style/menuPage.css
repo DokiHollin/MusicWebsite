@@ -1,0 +1,53 @@
+/* Sider的总体样式 */
+.ant-layout-sider {
+    background-color: #bf3030; /* 浅灰色背景 */
+    border-right: 1px solid #ae5757; /* 右侧边框 */
+}
+
+/* Sider中的菜单样式 */
+.ant-layout-sider .ant-menu {
+    background-color: transparent; /* 透明背景 */
+    border-right: 0; /* 移除默认的右侧边框 */
+}
+
+/* 一级菜单项的样式 */
+.ant-layout-sider .ant-menu-submenu-title {
+    color: #333; /* 黑色文字 */
+    font-size: 16px; /* 文字大小 */
+    padding: 16px 24px; /* 内边距 */
+}
+
+/* 一级菜单项鼠标悬停和选中时的样式 */
+.ant-layout-sider .ant-menu-submenu:hover > .ant-menu-submenu-title,
+.ant-layout-sider .ant-menu-submenu-selected > .ant-menu-submenu-title {
+    background-color: #e8e8e8; /* 深灰色背景 */
+    color: #333; /* 黑色文字 */
+}
+
+/* 一级菜单的图标样式 */
+.ant-layout-sider .ant-menu-submenu-title .ant-menu-submenu-expand-icon {
+    color: #333; /* 黑色图标 */
+}
+
+/* 二级菜单项的样式 */
+.ant-layout-sider .ant-menu-item {
+    color: #666; /* 浅黑色文字 */
+    font-size: 14px; /* 文字大小 */
+    padding: 12px 24px 12px 48px; /* 内边距，左侧有更多的内边距来考虑图标 */
+}
+
+/* 二级菜单项鼠标悬停和选中时的样式 */
+.ant-layout-sider .ant-menu-item:hover,
+.ant-layout-sider .ant-menu-item-selected {
+    background-color: #e8e8e8; /* 深灰色背景 */
+    color: #333; /* 黑色文字 */
+}
+
+/* 二级菜单的图标样式 */
+.ant-layout-sider .ant-menu-item .anticon {
+    color: #666; /* 浅黑色图标 */
+    margin-right: 8px; /* 图标和文字之间的距离 */
+}
+
+  
+

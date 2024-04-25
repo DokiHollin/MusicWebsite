@@ -1,0 +1,89 @@
+/* styles.css */
+.vip-container {
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgb(42,58,83);
+  color: rgb(231, 231, 231);
+}
+
+.vip {
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgb(42,58,83);
+  color: rgb(231, 231, 231);
+}
+
+.column {
+  float: left;
+  width: 40%;
+}
+
+.c {
+  float: left;
+  width: 20%;
+  border: 2px solid rgb(197, 197, 197);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pricing-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pricing-tier {
+  border-top: 1px solid #ffffff;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  
+}
+
+.vip-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.vip-container h2 {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.vip-container ul {
+  display: inline-block;
+  text-align: left;
+}
+
+.vip-container a {
+  text-decoration: none;
+  color: #007bff;
+}
+  
+.vip-btn {
+  padding: 10px 20px;
+  background-color: transparent; /* Remove background */
+  border: none; /* Remove border */
+  color: rgb(231, 231, 231);
+  margin: 0 10px;
+  transition: color 0.3s; /* Transition for smooth color change */
+  font-size: 25px;
+}
+
+.vip-btn:hover {
+    color: rgb(21, 51, 182); /* Change color to pink when hovered */
+}
+
+.middle-bot-vip {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  background-color: rgb(42,58,83);
+}

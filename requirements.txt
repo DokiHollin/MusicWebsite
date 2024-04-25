@@ -1,0 +1,10 @@
+django
+djangorestframework
+dj-rest-auth
+django-cors-headers
+channels
+mysqlclient
+boto3
+requests
+Pillow
+gunicorn

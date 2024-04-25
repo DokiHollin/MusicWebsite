@@ -1,0 +1,89 @@
+.right-bot, .left-bot {
+    width: 10%;
+    background-color: rgb(42,58,83);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top {
+    height: calc((100vh * 5 / 7) / 6);
+    background-color: rgb(42,58,83);
+    display: flex;
+}
+
+.top-profile {
+    text-align: center;
+    color: rgb(231, 231, 231);
+    margin: auto;
+}
+
+.edit {
+    flex: 3;
+    display: flex;
+    background-color: rgb(42,58,83);
+    justify-content: space-between;
+    flex-direction: column;
+    width: 20%;
+}
+
+
+.rows {
+    display: flex;
+    background-color: rgb(42,58,83);
+    width: 100%;
+    color: rgb(231, 231, 231);
+}
+
+.bot {
+    border-top: 1px solid #ffffff;
+    height: calc((100vh * 5 / 7) * 2 / 3);
+    background-color: rgb(42,58,83);
+    display: flex;
+    color: rgb(231, 231, 231);
+}
+
+
+
+.profile-pic-column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(231, 231, 231);
+    
+}
+
+.center-bot {
+    flex: 3;
+    display: flex;
+    background-color: rgb(42,58,83);
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 20%;
+}
+
+.profile-pic img {
+    text-align: center;
+    margin-top: 15px;
+    width: 200px;
+    height: 200px;
+    border-radius: 30%;
+    
+}
+
+.block{
+    text-align: left;
+    background-color: rgb(42,58,83);
+    width: 80%;
+}
+
+.middle-bot {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(42,58,83);
+}

@@ -1,0 +1,411 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    /* height: 75px; */
+    background-color: #242221;
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+    }
+
+    .red-line {
+        height: 5px;
+        background-color: #c20b0b;
+    }
+}
+
+
+
+
+/* Logo 样式 */
+.logo {
+    background-image: url('../resource/logo.png');
+    /* 其他样式... */
+}
+
+.header-left {
+    display: flex;
+}
+
+.header-left .logo {
+    display: inline-block;
+    width: 176px;
+    height: 69px;
+    background-position: 0 0;
+    text-indent: -9999px;
+}
+
+.header-left .header-group {
+    display: flex;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.header-left .header-group .header-item {
+    position: relative;
+    padding: 0 19px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.header-left .header-group .header-item:hover {
+    text-decoration: none;
+    background-color: #000;
+}
+
+.header-left .header-group .header-item:last-of-type {
+    position: relative;
+}
+
+.header-left .header-group .header-item:last-of-type::after {
+    position: absolute;
+    content: '';
+    width: 28px;
+    height: 19px;
+    background-image: url('../resource/iconE.png'); /* Adjust the path as necessary */
+    background-position: -192px 0;
+    top: 20px;
+    right: -20px;
+}
+
+.header-left .header-group .link-active {
+    color: #fff;
+    background-color: #000;
+}
+
+.header-left .header-group .link-active .icon {
+    position: absolute;
+    width: 12px;
+    height: 7px;
+    bottom: -1px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-image: url('../resource/iconE.png'); /* Adjust the path as necessary */
+    background-position: 254px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.top-lower {
+    height: calc((100vh / 7) * 1 / 3);
+    background-color: lightseagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle {
+    height: calc(100vh * 5 / 7);
+    display: flex;
+    flex-direction: column;
+}
+
+.middle-top {
+    height: calc((100vh * 5 / 7) / 3);
+    display: flex;
+}
+
+.middle-top .left, .middle-top .right {
+    width: 20%;
+    background-color: lightcoral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-top .center {
+    width: 60%;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-bottom {
+    height: calc((100vh * 5 / 7) * 2 / 3);
+    display: flex;
+}
+
+.middle-bottom .main {
+    width: 80%;
+    background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-bottom .sidebar {
+    width: 20%;
+    background-color: lightyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*.bottom {*/
+/*    height: calc(100vh / 7);*/
+/*    background-color: lightgrey;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: space-around;*/
+/*    padding: 0 40px 0 100px;*/
+/*}*/
+.bottom {
+    height: calc(100vh / 7);
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image Button CSS */
+.image-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.image-btn img {
+    width: 50px;
+    height: auto;
+}
+
+.antd-btn {
+    color: pink;
+    font-size: 400%;
+}
+
+.modal-content {
+    background-color: white;
+    width: 100%;
+    height: calc(6/7 * 100vh);
+    display: flex;
+    flex-direction: row; /* 改变方向为行 */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* 这将确保内部的内容不会溢出模态的边界 */
+}
+
+.progress-time-bar input[type="range"] {
+    appearance: none;
+    background: linear-gradient(to right, pink 0%, pink 50%, #e0e0e0 50%, #e0e0e0 100%); /* 这只是一个示例，50%将根据进度动态改变 */
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.2s;
+}
+
+.progress-time-bar input[type="range"]:hover {
+    height: 8px;
+}
+
+.progress-time-bar input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: 1px solid pink;
+    visibility: hidden;
+}
+
+.progress-time-bar input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: 1px solid pink;
+    visibility: hidden;
+}
+
+.progress-time-bar input[type="range"]:hover::-webkit-slider-thumb {
+    visibility: visible;
+}
+
+.progress-time-bar input[type="range"]:hover::-moz-range-thumb {
+    visibility: visible;
+}
+
+
+.progress-time-bar {
+    padding: 0;
+    flex: 0.2; /* adjust as needed */
+    width: 99.7%; /* use the full width */
+}
+
+.bottom-controls {
+    flex: 0.8; /* adjust as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-controls, .center-controls, .right-controls {
+    display: flex;
+    align-items: center;
+
+}
+.center-controls{
+    margin-left: 10vw;
+}
+.song-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15px; /* adjust as needed */
+    color: white;
+}
+
+.song-title-artist {
+    display: flex;
+    align-items: center;
+}
+
+.artist-btn {
+    background: transparent;
+    border: none;
+    color: white; /* adjust color as needed */
+    cursor: pointer;
+    padding: 0;
+    margin-left: 5px; /* adjust as needed */
+    font-size: 15px;
+}
+
+progress {
+    width: 100%;
+
+}
+
+/* Volume Control CSS */
+/*.volume-control {*/
+/*    width: 100px; !* Example size, you can adjust as needed *!*/
+/*    margin: 0 10px; !* Spacing around the volume control *!*/
+/*}*/
+
+.volume-control {
+    appearance: none;
+    background: linear-gradient(to right, pink 0%, pink 50%, #e0e0e0 50%, #e0e0e0 100%);
+    height: auto;
+    width: 30%;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.15s;
+
+
+    
+}
+
+
+.volume-control::-webkit-slider-thumb {
+    appearance: none;
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: 1px solid pink;
+}
+
+.volume-control::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: 1px solid pink;
+}
+
+.boot-icon {
+    color: pink;
+    font-size: 400%;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.modal-queue-content {
+    position: absolute;
+    top: calc(1/7 * 100vh); /* 因为Middle Section开始于2/7的页面高度 */
+    left: 80%;
+    right: 0;
+    bottom: calc(1/7 * 100vh); /* 与Middle Section的高度相同 */
+    background-color: white;
+    overflow-y: auto; /* 如果内容过多，允许滚动 */
+    padding: 20px; /* 内部间距 */
+}
+
+/* 测试用 ================================*/
+.btn-container-test {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu-test {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.dropdown-menu-test button {
+    padding: 10px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-menu-test button:hover {
+    background-color: #b44343;
+}
+/* 截至 ================================*/
+
+
+  
+    
+  

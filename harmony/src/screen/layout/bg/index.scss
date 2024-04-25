@@ -1,0 +1,50 @@
+.bg_container {
+  z-index: -1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.animate__animated {
+    animation-duration: 2s !important;
+  }
+
+  #bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: 105vw auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: filter .8s;
+
+    &.active {
+      filter: blur(3px);
+    }
+  }
+}
+
+#bgMask {
+  z-index: -999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0);
+  opacity: 0.2;
+  transition: opacity .8s;
+
+  &.active {
+    opacity: 0.6;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .bg_container {
+    #bg {
+      background-size: auto 110vh;
+    }
+  }
+}
