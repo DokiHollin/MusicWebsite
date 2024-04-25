@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0p#x^rr%6*ntr)*c_dl34ztax3xi_30dyb-w4e@5*hy=c#i+w5'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -118,9 +118,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'MusicWeb',
-        'USER': 'zechao',
-        'PASSWORD': 'sunzechao2002',
-        'HOST': 'elec3609.clerm09qlf6z.ap-southeast-2.rds.amazonaws.com',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
         'PORT': '3306',
     }
 }
@@ -159,7 +159,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://54.79.70.65",
+    "http://",
 ]
  
 
@@ -176,11 +176,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 VERIFY_SSL: False
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = ''  # 您的沙箱邮件地址
-EMAIL_HOST_PASSWORD = '0fbe34b69ecf0518aef3745f6b697b45-3750a53b-d19513e7'  # 您的Mailgun API私钥
+EMAIL_HOST_PASSWORD = ''  # 您的Mailgun API私钥
 
 
 
@@ -195,7 +195,7 @@ AWS_S3_OBJECT_PARAMETERS = {
 AWS_DEFAULT_ACL = 'public-read'
 AWS_LOCATION = 'media'
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = ''
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 
 
